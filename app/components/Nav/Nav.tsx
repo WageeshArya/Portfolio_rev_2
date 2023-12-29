@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
+import classes from "./Nav.module.css";
 type Props = {};
 
 const Nav = (props: Props) => {
@@ -41,13 +41,18 @@ const Nav = (props: Props) => {
         scroll === "down" ? "-translate-y-full" : "border-b-2"
       }`}
     >
-      <div className="flex-1">W/A</div>
-      <div className="flex-1 w-100 flex justify-end">
-        <div className="mr-8">Skills</div>
-        <div className="mr-8">Experience</div>
-        <div className="mr-8">Contact</div>
-        <div className="mr-8">Resumé</div>
+      <div className="flex-2 text-xl">W/A</div>
+      <div className="flex-1 w-100 flex justify-center">
+        <div className={`mr-12 cursor-pointer`}>
+          <a className={classes.navLink}>SKILLS</a>
+        </div>
+        <div className={`mr-12 cursor-pointer ${classes.navLink}`}>
+          EXPERIENCE
+        </div>
+        <div className={`mr-12 cursor-pointer ${classes.navLink}`}>CONTACT</div>
+        <div className={`mr-12 cursor-pointer ${classes.navLink}`}>RESUMÉ</div>
       </div>
+      <div className="flex-2 flex justify-end">LANGUAGE</div>
     </header>
   );
 };
