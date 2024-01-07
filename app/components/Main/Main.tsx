@@ -21,17 +21,17 @@ const Overlay = () => {
     >
       <div className="absolute z-10 top-[50%] -translate-y-1/2 right-0 text-right p-10">
         <div
-          className={`titleText1 text-left max-xl:ml-2 max-lg:ml-[2.5rem] max-md:text-right`}
+          className={`titleText1 text-left xl:ml-2 lg:text-right sm:text-right`}
         >
           Hi! I&#39;m
         </div>
-        <div className="titleText2 laptop:text-8xl phone:text-5xl mix-blend-difference">
+        <div className="titleText2 xl:text-8xl lg:text-8xl sm:text-5xl mix-blend-difference">
           WAGEESH ARYA
         </div>
-        <div className="titleText3 laptop:text-4xl phone:text-2xl">
+        <div className="titleText3 xl:text-4xl lg:text-3xl sm:text-2xl">
           I&#39;m a WEB DEVELOPER
         </div>
-        <div className="titleText4 laptop:text-[1rem] phone:text-md phone:text-sm">
+        <div className="titleText4 xl:text-[1rem] lg:text-md sm:text-sm">
           with {new Date().getFullYear() - 2020} years of experience
         </div>
       </div>
