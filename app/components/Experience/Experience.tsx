@@ -108,7 +108,7 @@ const Experience = (props: Props) => {
       <div className="mb-[30vh]">
         <div className="w-[100vw] h-[100vh]">
           <div className="h-[50vh] w-full" />
-          <div className="sticky top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-[7rem]">
+          <div className="sticky top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-[7rem] overflow-x-hidden">
             <Image
               id="expImg"
               className="absolute object-cover"

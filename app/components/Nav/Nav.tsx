@@ -125,7 +125,7 @@ const Nav = (props: Props) => {
           className="flex-2 flex justify-end cursor-pointer"
           onClick={openClose}
         >
-          Menu
+          {menu ? "Close" : "Menu"}
         </div>
       </header>
       <div
