@@ -1,22 +1,157 @@
 .navLink {
-  text-transform: uppercase;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   position: relative;
+  width: max-content;
+  cursor: pointer;
+  color: #372f4d;
 }
 .navLink:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: block;
-  height: 1px;
+  height: 2px;
   left: 0%;
   position: absolute;
-  background: #000;
+  background: #372f4d;
   transition: width 0.3s ease 0s, right 0.3s ease 0s;
   width: 0;
 }
 .navLink:hover:after {
   width: 100%;
   left: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  z-index: 500 !important;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  color: black;
+}
+
+.menuOpenBtn {
+  cursor: pointer;
+}
+
+.header {
+  position: absolute;
+  bottom: 0;
+  margin: 0.25rem;
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.menuOverlay {
+  width: 100%;
+  padding: 2rem;
+  background-color: #eee;
+  position: fixed;
+  /* pointer-events: none; */
+}
+
+.menuCloseBtn {
+  cursor: pointer;
+}
+
+.menuNav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.menuCols {
+  display: flex;
+}
+
+.menuCols > div {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.video {
+  width: 50%;
+}
+
+.videoPreview {
+  width: 100%;
+  height: 150px;
+  background-color: hotpink;
+}
+
+.videoDetails {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: black;
+}
+
+.menuLink {
+  position: relative;
+  width: max-content;
+}
+
+.menuLink a {
+  font-size: 40px;
+}
+
+.menuLink:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: hotpink;
+  transition: 0.3s all;
+}
+
+.menuLink:hover,
+.menuLink:after {
+  width: 100%;
+}
+
+.menuFooter {
+  display: flex;
+  flex-direction: column;
+  color: hotpink;
+}
+
+.menuDivider {
+  width: 0%;
+  height: 1px;
+  background: black;
+  margin: 1rem 0;
+}
+
+.menuFooterCopy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.navBackground {
+  background-color: #dfd3f9;
+}
+.navInnerLogoContainer {
+  background-color: #dfc0f9;
+  border: 2px solid #e4aaf4;
+}
+.navInnerLogoText {
+  color: white;
 }
