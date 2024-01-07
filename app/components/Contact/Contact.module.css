@@ -1,0 +1,17 @@
+.linksBackground {
+  background-image: linear-gradient(
+    to right,
+    #e4aaf4,
+    #e1b5f7,
+    #dfc0f9,
+    #decafa,
+    #dfd3f9,
+    #dbd7f9,
+    #d9dbf8,
+    #d8def7,
+    #cfddf7,
+    #c6ddf7,
+    #bcdcf5,
+    #b3dcf2
+  );
+}
