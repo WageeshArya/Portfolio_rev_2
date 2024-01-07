@@ -33,7 +33,7 @@ const Nav = (props: Props) => {
         display: "flex",
       });
       gsap.to("#extendedNav", {
-        height: "50vh",
+        height: window.innerWidth > 640 ? "50vh" : "100vh",
         duration: 0.5,
         ease: "power4.out",
       });
@@ -133,7 +133,7 @@ const Nav = (props: Props) => {
         className={`${classes.navBackground} w-full h-0 text-white fixed top-0 left-0 !z-30 hidden px-10 flex-col`}
       >
         <div className="h-[6rem] w-full" />
-        <div className="flex flex-1">
+        <div className="flex flex-1 sm:flex-col">
           <div className="flex-1 flex items-center justify-center">
             <div
               className={`navInnerLogoContainer ${classes.navInnerLogoContainer} h-[4rem] bg-white text-6xl text-[#3b7fff] rounded-md py-10 px-6 flex items-center`}
@@ -146,24 +146,24 @@ const Nav = (props: Props) => {
           <div className="flex-1">
             <ul className="links">
               <li
-                className={`contentLink text-4xl mb-4 ${classes.navLink}`}
+                className={`contentLink text-5xl mb-6 ${classes.navLink}`}
                 onClick={() => scrollTo("SKILLS")}
               >
                 Skills
               </li>
               <li
-                className={`contentLink text-4xl mb-4 ${classes.navLink}`}
+                className={`contentLink text-5xl mb-6 ${classes.navLink}`}
                 onClick={() => scrollTo("EXPERIENCE")}
               >
                 Experience
               </li>
               <li
-                className={`contentLink text-4xl mb-4 ${classes.navLink}`}
+                className={`contentLink text-5xl mb-6 ${classes.navLink}`}
                 onClick={() => scrollTo("CONTACT")}
               >
                 Contact
               </li>
-              <li className={`contentLink text-4xl mb-4 ${classes.navLink}`}>
+              <li className={`contentLink text-5xl mb-6 ${classes.navLink}`}>
                 Resumé
               </li>
             </ul>
@@ -175,7 +175,7 @@ const Nav = (props: Props) => {
       </div>
       {menu && (
         <div
-          className="h-[50vh] w-[100vw] bottom-0 left-0 fixed !z-30"
+          className="h-[50vh] sm:!h-0 w-[100vw] bottom-0 left-0 fixed !z-30"
           onClick={openClose}
         ></div>
       )}
