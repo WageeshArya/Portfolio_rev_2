@@ -12,18 +12,9 @@ const Title = (props: Props) => {
   let direction = -1;
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.25,
-        start: 0,
-        end: window.innerHeight,
-        onUpdate: (e) => (direction = e.direction * -1),
-      },
-      x: "-=300px",
-    });
-    requestAnimationFrame(animation);
+    gsap.set(".marquee__inner_1", { xPercent: -75 });
+    gsap.set(".marquee__inner_3", { xPercent: -75 });
+    // gsap.set(".marquee__inner_2", { xPercent: 75 });
   }, []);
 
   const animation = () => {
@@ -40,18 +31,98 @@ const Title = (props: Props) => {
   };
 
   return (
-    <div className={classes.sliderContainer}>
-      <div ref={slider} className={classes.slider}>
-        <p ref={firstText}>
-          Here&#39;s a short list of{" "}
-          <span className="text-[#55fff2] font-bold">MY SKILLS.</span>
-        </p>
-        <p ref={secondText}>
-          Here&#39;s a short list of{" "}
-          <span className="text-[#55fff2] font-bold">MY SKILLS.</span>
-        </p>
+    <>
+      <div className={`${classes.marquee}`}>
+        <div
+          id="marquee__inner_1"
+          className={`marquee__inner_1 ${classes.marquee__inner}`}
+          aria-hidden="true"
+        >
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+        </div>
       </div>
-    </div>
+      <div className={`!bg-white !bg-none ${classes.marquee}`}>
+        <div
+          id="marquee__inner_2"
+          className={`marquee__inner_2 !text-black ${classes.marquee__inner}`}
+          aria-hidden="true"
+        >
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+        </div>
+      </div>
+      <div className={`${classes.marquee}`}>
+        <div
+          id="marquee__inner_3"
+          className={`marquee__inner_3 ${classes.marquee__inner}`}
+          aria-hidden="true"
+        >
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div className={`marquee__part ${classes.marquee__part}`}>
+            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+          </div>
+        </div>
+      </div>
+    </>
+    // <div className={classes.sliderContainer}>
+    //   <div ref={slider} className={classes.slider}>
+    //     <p ref={firstText}>
+    //       Here&#39;s a short list of{" "}
+    //       <span className="text-[#008A64] font-bold">MY SKILLS.</span>
+    //     </p>
+    //     <p ref={secondText}>
+    //       Here&#39;s a short list of{" "}
+    //       <span className="text-[#008A64] font-bold">MY SKILLS.</span>
+    //     </p>
+    //   </div>
+    // </div>
   );
 };
 
