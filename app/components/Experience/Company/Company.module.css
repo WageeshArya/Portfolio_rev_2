@@ -1,0 +1,26 @@
+.cardContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+.cardContainer > div {
+  width: 60vw;
+  height: 50vh;
+  border-radius: 20px;
+  padding: 3rem;
+}
+.zero {
+  background-color: #f7f8ff;
+}
+.one {
+  background-color: #eceeff;
+}
+.two {
+  background-color: #f8f8ff;
+}
+.three {
+  background-color: #efeff2;
+}
