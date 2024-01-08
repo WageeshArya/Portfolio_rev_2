@@ -111,12 +111,11 @@ const Experience = (props: Props) => {
         <div className="w-[100vw]">
           <div className="expander sm:h-[60vh] lg:h-[100vh] xl:h-[60vh] w-full" />
           <div className="xl:h-[100vh] lg:h-[50vh] sm:h-[50vh] overflow-x-hidden mainExpand sticky top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-[7rem]">
-            <Image
+            {/* Next Image component made the image lower quality on mobile screens */}
+            <img
               id="expImg"
               className="absolute object-cover"
-              src={"/experience.svg"}
-              height={400}
-              width={200}
+              src={"/experience.png"}
               alt=""
             />
             <div
