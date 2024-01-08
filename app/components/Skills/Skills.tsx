@@ -48,10 +48,11 @@ const Skills = (props: Props) => {
     gsap.to("#marquee__inner_1", {
       x: 300,
       duration: 5.5,
-      ease: "power4.out",
+      ease: "power4.inOut",
       scrollTrigger: {
+        scrub: 3,
         trigger: "#SKILLS",
-        start: "top center",
+        start: "top-=400 center",
         end: "center center",
         toggleActions: "restart none none reverse",
       },
@@ -59,10 +60,11 @@ const Skills = (props: Props) => {
     gsap.to("#marquee__inner_2", {
       x: -300,
       duration: 5.5,
-      ease: "power4.out",
+      ease: "power4.inOut",
       scrollTrigger: {
+        scrub: 3,
         trigger: "#SKILLS",
-        start: "top center",
+        start: "top-=400 center",
         end: "center center",
         toggleActions: "restart none none reverse",
       },
@@ -70,10 +72,11 @@ const Skills = (props: Props) => {
     gsap.to("#marquee__inner_3", {
       x: 300,
       duration: 5.5,
-      ease: "power4.out",
+      ease: "power4.inOut",
       scrollTrigger: {
+        scrub: 3,
         trigger: "#SKILLS",
-        start: "top center",
+        start: "top-=400 center",
         end: "center center",
         toggleActions: "restart none none reverse",
       },
@@ -83,7 +86,7 @@ const Skills = (props: Props) => {
   const mouseMove = (event: any, element: string) => {
     const img = document.querySelectorAll(`.${element}`)[0];
     gsap.to(img, {
-      top: event.pageY,
+      top: event.pageY - 250,
       left: event.pageX + 20,
       duration: 0.5,
       ease: Quad.easeOut,

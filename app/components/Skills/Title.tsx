@@ -12,8 +12,12 @@ const Title = (props: Props) => {
   let direction = -1;
 
   useEffect(() => {
-    gsap.set(".marquee__inner_1", { xPercent: -75 });
-    gsap.set(".marquee__inner_3", { xPercent: -75 });
+    gsap.set(".marquee__inner_1", {
+      xPercent: window.innerWidth > 2800 ? -20 : -75,
+    });
+    gsap.set(".marquee__inner_3", {
+      xPercent: window.innerWidth > 2800 ? -20 : -75,
+    });
     // gsap.set(".marquee__inner_2", { xPercent: 75 });
   }, []);
 
@@ -40,6 +44,31 @@ const Title = (props: Props) => {
           className={`marquee__inner_1 ${classes.marquee__inner}`}
           aria-hidden="true"
         >
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            HERE&#39;S A SHORT LIST OF MY SKILLS.
+          </div>
           <div
             className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
           >
@@ -110,6 +139,36 @@ const Title = (props: Props) => {
           >
             A BRIEF RUNDOWN OF MY ABILITIES.
           </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            A BRIEF RUNDOWN OF MY ABILITIES.
+          </div>
         </div>
       </div>
       <div
@@ -123,32 +182,72 @@ const Title = (props: Props) => {
           <div
             className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
           >
-            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+            ALWAYS DOWN TO LEARN MORE.
           </div>
           <div
             className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
           >
-            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+            ALWAYS DOWN TO LEARN MORE.
           </div>
           <div
             className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
           >
-            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+            ALWAYS DOWN TO LEARN MORE.
           </div>
           <div
             className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
           >
-            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+            ALWAYS DOWN TO LEARN MORE.
           </div>
           <div
             className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
           >
-            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+            ALWAYS DOWN TO LEARN MORE.
           </div>
           <div
             className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
           >
-            BUT I&#39;M ALWAYS DOWN TO LEARN MORE.
+            ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            ALWAYS DOWN TO LEARN MORE.
+          </div>
+          <div
+            className={`marquee__part xl:text-2xl lg:text-xl sm:text-xl ${classes.marquee__part}`}
+          >
+            ALWAYS DOWN TO LEARN MORE.
           </div>
         </div>
       </div>

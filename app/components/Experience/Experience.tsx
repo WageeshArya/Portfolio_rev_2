@@ -39,9 +39,13 @@ const Experience = (props: Props) => {
         x: 0,
       },
       {
-        scale: 10,
-        x: window.innerWidth > 767 ? -3000 : -1000,
-
+        scale: window.innerWidth > 767 ? 13 : 10,
+        x:
+          window.innerWidth > 767
+            ? window.innerWidth > 2000
+              ? -4500
+              : -3000
+            : -1000,
         scrollTrigger: {
           trigger: ".expander",
           start: "bottom center",
@@ -75,8 +79,13 @@ const Experience = (props: Props) => {
         x: 0,
       },
       {
-        scale: 10,
-        x: window.innerWidth > 767 ? 3000 : 1000,
+        scale: window.innerWidth > 767 ? 13 : 10,
+        x:
+          window.innerWidth > 767
+            ? window.innerWidth > 2000
+              ? 4500
+              : 3000
+            : 1000,
         scrollTrigger: {
           trigger: ".expander",
           start: "bottom center",
@@ -109,8 +118,8 @@ const Experience = (props: Props) => {
     <section id="EXPERIENCE">
       <div className="">
         <div className="w-[100vw]">
-          <div className="expander sm:h-[60vh] lg:h-[100vh] xl:h-[60vh] w-full" />
-          <div className="xl:h-[100vh] lg:h-[50vh] sm:h-[50vh] overflow-x-hidden mainExpand sticky top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-[7rem]">
+          <div className="expander sm:h-[60vh] lg:h-[80vh] xl:h-[60vh] w-full" />
+          <div className="xl:h-[100vh] lg:h-[100vh] sm:h-[50vh] overflow-x-hidden mainExpand sticky top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-[7rem]">
             {/* Next Image component made the image lower quality on mobile screens */}
             <img
               id="expImg"
@@ -131,7 +140,7 @@ const Experience = (props: Props) => {
               IENCE
             </div>
           </div>
-          <div className="w-[100vw] sm:h-[50vh] xl:h-[20vh]" />
+          <div className="w-[100vw] sm:h-[50vh] lg:h-[50vh] xl:h-[20vh]" />
         </div>
       </div>
       {experience.map((item: any, index: number) => {
