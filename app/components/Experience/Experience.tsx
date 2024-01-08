@@ -14,17 +14,18 @@ const Experience = (props: Props) => {
       "#expImg",
       {
         rotate: "45deg",
-        width: "200px",
+        width: window.innerWidth > 767 ? "200px" : "100px",
         height: "400px",
       },
       {
         rotate: "0deg",
         width: "100vw",
         height: "75vh",
+        delay: 1,
         scrollTrigger: {
           trigger: ".expander",
-          start: "top center",
-          end: "30% center",
+          start: "bottom 40%",
+          end: "bottom top",
           markers: false,
           scrub: 1,
           toggleActions: "restart none none reverse",
@@ -39,11 +40,12 @@ const Experience = (props: Props) => {
       },
       {
         scale: 10,
-        x: -3500,
+        x: window.innerWidth > 767 ? -3000 : -1000,
+
         scrollTrigger: {
           trigger: ".expander",
-          start: "top center",
-          end: "bottom 10%",
+          start: "bottom center",
+          end: "bottom top-=300",
           markers: false,
           scrub: 1,
           toggleActions: "restart none none reverse",
@@ -59,8 +61,8 @@ const Experience = (props: Props) => {
         opacity: 0,
         scrollTrigger: {
           trigger: ".expander",
-          start: "center center",
-          end: "bottom center",
+          start: "bottom top",
+          end: "bottom top",
           markers: false,
           toggleActions: "restart none none reverse",
         },
@@ -74,11 +76,11 @@ const Experience = (props: Props) => {
       },
       {
         scale: 10,
-        x: 3500,
+        x: window.innerWidth > 767 ? 3000 : 1000,
         scrollTrigger: {
           trigger: ".expander",
-          start: "top center",
-          end: "bottom 10%",
+          start: "bottom center",
+          end: "bottom top-=300",
           markers: false,
           scrub: 1,
           toggleActions: "restart none none reverse",
@@ -94,8 +96,8 @@ const Experience = (props: Props) => {
         opacity: 0,
         scrollTrigger: {
           trigger: ".expander",
-          start: "center center",
-          end: "bottom center",
+          start: "bottom top",
+          end: "bottom top",
           markers: false,
           toggleActions: "restart none none reverse",
         },
@@ -104,11 +106,11 @@ const Experience = (props: Props) => {
   }, []);
 
   return (
-    <section>
-      <div className="mb-[30vh]">
-        <div className="w-[100vw] h-[100vh]">
-          <div className="h-[50vh] w-full" />
-          <div className="sticky top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-[7rem] overflow-x-hidden">
+    <section id="EXPERIENCE">
+      <div className="">
+        <div className="w-[100vw]">
+          <div className="expander sm:h-[60vh] lg:h-[100vh] xl:h-[60vh] w-full" />
+          <div className="xl:h-[100vh] lg:h-[50vh] sm:h-[50vh] overflow-x-hidden mainExpand sticky top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-[7rem]">
             <Image
               id="expImg"
               className="absolute object-cover"
@@ -117,12 +119,20 @@ const Experience = (props: Props) => {
               width={200}
               alt=""
             />
-            <div id="titlePart1">MY EXPE</div>
-            <div id="titlePart2">RIENCE</div>
+            <div
+              id="titlePart1"
+              className="xl:text-[7rem] lg:text-[4rem] sm:text-[3rem]"
+            >
+              EXPER
+            </div>
+            <div
+              id="titlePart2"
+              className="xl:text-[7rem] lg:text-[4rem] sm:text-[3rem]"
+            >
+              IENCE
+            </div>
           </div>
-          <div className="expander w-[100vw] h-[100vh]">
-            <div className="w-full h-[60vh]"></div>
-          </div>
+          <div className="w-[100vw] sm:h-[50vh] xl:h-[20vh]" />
         </div>
       </div>
       {experience.map((item: any, index: number) => {
