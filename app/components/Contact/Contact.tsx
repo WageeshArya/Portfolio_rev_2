@@ -88,7 +88,9 @@ const Contact = () => {
     <section id="CONTACT" className="w-[100vw] h-[100vh]">
       <div className="flex w-full h-full flex-col">
         <div className="overflow-hidden h-[50vh] flex items-end justify-center">
-          <div className="contactTitle text-center text-9xl mb-5">CONTACT</div>
+          <div className="contactTitle text-center text-9xl sm:text-6xl mb-5">
+            CONTACT
+          </div>
           {/* <div className="w-[70%] mx-auto">
             Let&#39;s explore the possibilities of your front-end ideas! Ready
             to transform concepts into captivating user experiences. Contact me
@@ -100,11 +102,11 @@ const Contact = () => {
         <div
           className={`contactLinksArea flex items-center justify-center w-full h-0 ${classes.linksBackground}`}
         >
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-2">
             <a className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col ">
               <div className="overflow-hidden">
                 <Image
-                  className="contactIcon1"
+                  className="contactIcon1  sm:h-[25px] sm:w-[25px]"
                   src="/buttonIcons/send.svg"
                   width={40}
                   height={40}
@@ -112,13 +114,15 @@ const Contact = () => {
                 />
               </div>
               <div className="overflow-hidden">
-                <div className="contactLink1 text-xl mt-4">Email</div>
+                <div className="contactLink1 text-xl sm:text-[1rem] mt-4">
+                  Email
+                </div>
               </div>
             </a>
             <a className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col">
               <div className="overflow-hidden">
                 <Image
-                  className="contactIcon2"
+                  className="contactIcon2  sm:h-[25px] sm:w-[25px]"
                   src="/buttonIcons/github.svg"
                   width={40}
                   height={40}
@@ -126,13 +130,15 @@ const Contact = () => {
                 />
               </div>
               <div className="overflow-hidden">
-                <div className="contactLink2 text-xl mt-4">GitHub</div>
+                <div className="contactLink2 text-xl sm:text-[1rem] mt-4">
+                  GitHub
+                </div>
               </div>
             </a>
             <a className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col">
               <div className="overflow-hidden">
                 <Image
-                  className="contactIcon3"
+                  className="contactIcon3  sm:h-[25px] sm:w-[25px]"
                   src="/buttonIcons/linkedin.svg"
                   width={40}
                   height={40}
@@ -140,13 +146,15 @@ const Contact = () => {
                 />
               </div>
               <div className="overflow-hidden">
-                <div className="contactLink3 text-xl mt-4">LinkedIn</div>
+                <div className="contactLink3 text-xl sm:text-[1rem] mt-4">
+                  LinkedIn
+                </div>
               </div>
             </a>
             <a className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col">
               <div className="overflow-hidden">
                 <Image
-                  className="contactIcon4"
+                  className="contactIcon4  sm:h-[25px] sm:w-[25px]"
                   src="/buttonIcons/paperclip.svg"
                   width={40}
                   height={40}
@@ -154,7 +162,9 @@ const Contact = () => {
                 />
               </div>
               <div className="overflow-hidden">
-                <div className="contactLink3 text-xl mt-4">Resumé</div>
+                <div className="contactLink3 text-xl sm:text-[1rem] mt-4">
+                  Resumé
+                </div>
               </div>
             </a>
           </div>
