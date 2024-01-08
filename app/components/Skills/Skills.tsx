@@ -1,11 +1,20 @@
 "use client";
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from "react";
 import Title from "./Title";
 import classes from "./Skills.module.css";
 import Image from "next/image";
 import gsap, { Quad } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-type Props = {};
+type Props = {
+  isEnglish: boolean;
+  setIsEnglish: Dispatch<SetStateAction<boolean>>;
+};
 
 const skillsList = {
   HTML: "HTML_icon",
@@ -26,7 +35,7 @@ const skillsList = {
   ReactThree: "ReactThree_icon",
 };
 
-const Skills = (props: Props) => {
+const Skills = ({ isEnglish, setIsEnglish }: Props) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const numbers = Array.from({ length: 15 }, (_, i) => i + 1);
@@ -114,7 +123,7 @@ const Skills = (props: Props) => {
   return (
     //#f8f8ff
     <section id="SKILLS" className="bg-[#fff] overflow-x-hidden">
-      <Title />
+      <Title isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
       <div className="p-[5rem] sm:p-[2.5rem]">
         <div className="w-100 pt-[0px]">
           <div className="font-bold text-8xl sm:text-5xl pb-[2rem]">

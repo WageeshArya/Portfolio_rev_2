@@ -9,6 +9,7 @@ import Loader from "./components/Loader/Loader";
 import gsap from "gsap";
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [isEnglish, setIsEnglish] = useState(true);
   useEffect(() => {
     async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -34,7 +35,7 @@ export default function Home() {
     <main>
       <Loader />
       <div id="main" className={`${loading ? "!overflow-y-hidden" : ""}`}>
-        <Nav />
+        <Nav isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
         <Main />
         <Skills />
         <Experience />

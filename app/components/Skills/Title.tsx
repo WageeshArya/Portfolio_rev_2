@@ -1,10 +1,13 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import classes from "./Title.module.css";
-type Props = {};
-const Title = (props: Props) => {
+type Props = {
+  isEnglish: boolean;
+  setIsEnglish: Dispatch<SetStateAction<boolean>>;
+};
+const Title = ({ isEnglish, setIsEnglish }: Props) => {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);

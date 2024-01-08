@@ -1,12 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import classes from "./Nav.module.css";
 import Link from "next/link";
 import gsap from "gsap";
 import Image from "next/image";
-type Props = {};
+import Switch from "react-switch";
 
-const Nav = (props: Props) => {
+type Props = {
+  isEnglish: boolean;
+  setIsEnglish: Dispatch<SetStateAction<boolean>>;
+};
+
+const Nav = ({ isEnglish, setIsEnglish }: Props) => {
   const [menu, setMenu] = useState(false);
   const [isAvailable, setIsAvailable] = useState(true);
   const [scroll, setScroll] = useState("up");
@@ -164,7 +169,13 @@ const Nav = (props: Props) => {
           className="flex-2 flex justify-end cursor-pointer"
           onClick={openClose}
         >
-          {menu ? "Close" : "Menu"}
+          {menu
+            ? isEnglish
+              ? "Close"
+              : "閉じる"
+            : isEnglish
+            ? "Menu"
+            : "メニュー"}
         </div>
       </header>
       <div
@@ -184,9 +195,9 @@ const Nav = (props: Props) => {
             </div>
             <div className="overflow-hidden py-[1.5rem] text-center w-[80%]">
               <div className="navIntroText text-[#372f4d]">
-                Thank you for checking out my website! Your visit means a lot.
-                If you&#39;ve got questions, want more info, or just want to
-                chat, feel free to reach out. Cheers!
+                {isEnglish
+                  ? "Thank you for checking out my website! Your visit means a lot. If you&#39;ve got questions, want more info, or just want to chat, feel free to reach out. Cheers!"
+                  : "私のポートフォーリオをアクセスいただき、ありがとうございます！質問、相談などに関してお気軽にご連絡ください！"}
               </div>
             </div>
           </div>
@@ -196,19 +207,19 @@ const Nav = (props: Props) => {
                 className={`contentLink text-5xl mb-6 ${classes.navLink}`}
                 onClick={() => scrollTo("SKILLS")}
               >
-                Skills
+                {isEnglish ? "Skills" : "スキル"}
               </li>
               <li
                 className={`contentLink text-5xl mb-6 ${classes.navLink}`}
                 onClick={() => scrollTo("EXPERIENCE")}
               >
-                Experience
+                {isEnglish ? "Experience" : "経歴"}
               </li>
               <li
                 className={`contentLink text-5xl mb-6 ${classes.navLink}`}
                 onClick={() => scrollTo("CONTACT")}
               >
-                Contact
+                {isEnglish ? "Contact" : "問い合わせ"}
               </li>
               <li
                 className={`contentLink text-5xl mb-6 ${classes.navLink}`}
@@ -218,8 +229,22 @@ const Nav = (props: Props) => {
                   href="https://docs.google.com/document/d/1PmNAh-SwRZ9KTwDl5R-K1aLdr9Hklqxie8L7hR-iVis/edit?usp=sharing"
                   target="_blank"
                 >
-                  Resumé
+                  {isEnglish ? "Resumé" : "履歴書"}
                 </a>
+              </li>
+              <li>
+                <div className="flex pb-5">
+                  <div className="text-[#372f4d] mr-2">日本語</div>
+                  <Switch
+                    onChange={() => setIsEnglish(!isEnglish)}
+                    checked={isEnglish}
+                    checkedIcon={false}
+                    uncheckedIcon={false}
+                    offColor="#e1b5f7"
+                    onColor="#e1b5f7"
+                  />
+                  <div className="text-[#372f4d] ml-2">English</div>
+                </div>
               </li>
             </ul>
           </div>

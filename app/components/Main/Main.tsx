@@ -5,6 +5,7 @@ import { Outlines, Environment, useTexture } from "@react-three/drei";
 import { Physics, useSphere } from "@react-three/cannon";
 import { silkscreen } from "@/app/helpers/fonts";
 import { EffectComposer, N8AO, SMAA } from "@react-three/postprocessing";
+import { Dispatch, SetStateAction } from "react";
 
 const rfs = THREE.MathUtils.randFloatSpread;
 const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
@@ -14,7 +15,12 @@ const baubleMaterial = new THREE.MeshStandardMaterial({
   envMapIntensity: 1.5,
 });
 
-const Overlay = () => {
+type Props = {
+  isEnglish: boolean;
+  setIsEnglish: Dispatch<SetStateAction<boolean>>;
+};
+
+const Overlay = ({ isEnglish, setIsEnglish }: Props) => {
   return (
     <div
       className={`absolute top-0 left-0 z-5! h-[100vh] w-[100vw] pt-[4rem] ${silkscreen.className}`}
@@ -23,16 +29,20 @@ const Overlay = () => {
         <div
           className={`titleText1 text-left xl:ml-2 lg:text-right sm:text-right`}
         >
-          Hi! I&#39;m
+          {isEnglish ? "Hi! I'm" : "初めまして！"}
         </div>
         <div className="titleText2 xl:text-8xl lg:text-8xl sm:text-5xl mix-blend-difference">
-          WAGEESH ARYA
+          {isEnglish ? "WAGEESH ARYA" : "アリャー　ワギーシ"}
         </div>
         <div className="titleText3 xl:text-4xl lg:text-3xl sm:text-2xl">
-          I&#39;m a WEB DEVELOPER
+          {isEnglish
+            ? "I'm a WEB DEVELOPER"
+            : `です。${new Date().getFullYear() - 2020}年間の経験がある`}
         </div>
         <div className="titleText4 xl:text-[1rem] lg:text-md sm:text-sm">
-          with {new Date().getFullYear() - 2020} years of experience
+          {isEnglish
+            ? `with ${new Date().getFullYear() - 2020} years of experience`
+            : `フルスタック開発者です。`}
         </div>
       </div>
       <div className="absolute bottom-0 left-0 h-[6vh] w-[100vw] bg-gradient-to-t from-[#efeff2] z-5"></div>
@@ -40,9 +50,9 @@ const Overlay = () => {
   );
 };
 
-export const Main = () => (
+export const Main = ({ isEnglish, setIsEnglish }: Props) => (
   <div id="TOP" className="h-[100vh] w-[100vw]">
-    <Overlay />
+    <Overlay isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
     <Canvas
       shadows
       gl={{ antialias: false }}

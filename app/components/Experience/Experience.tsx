@@ -1,13 +1,16 @@
-import { useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 import { experience } from "@/app/helpers/experience";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Company from "./Company/Company";
 
-type Props = {};
+type Props = {
+  isEnglish: boolean;
+  setIsEnglish: Dispatch<SetStateAction<boolean>>;
+};
 
-const Experience = (props: Props) => {
+const Experience = ({ isEnglish, setIsEnglish }: Props) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(

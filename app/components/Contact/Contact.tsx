@@ -2,11 +2,16 @@
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 import Image from "next/image";
 import classes from "./Contact.module.css";
 
-const Contact = () => {
+type Props = {
+  isEnglish: boolean;
+  setIsEnglish: Dispatch<SetStateAction<boolean>>;
+};
+
+const Contact = ({ isEnglish, setIsEnglish }: Props) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(
@@ -91,13 +96,6 @@ const Contact = () => {
           <div className="contactTitle text-center text-9xl sm:text-6xl mb-5">
             CONTACT
           </div>
-          {/* <div className="w-[70%] mx-auto">
-            Let&#39;s explore the possibilities of your front-end ideas! Ready
-            to transform concepts into captivating user experiences. Contact me
-            to initiate a discussion and turn your visions into reality.
-            Let&#39;s collaborate to bring innovation and creativity to your
-            digital projects. Looking forward to hearing from you!
-          </div> */}
         </div>
         <div
           className={`contactLinksArea flex items-center justify-center w-full h-0 ${classes.linksBackground}`}
