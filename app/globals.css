@@ -7,10 +7,17 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
 section {
   scroll-snap-align: start;
+}
+
+* {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
