@@ -1,0 +1,23 @@
+.marquee__part {
+  flex-shrink: 0;
+  padding: 0 4px;
+  font-smooth: always;
+}
+
+.marquee {
+  color: #eee;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee__inner {
+  -webkit-font-smoothing: antialiased;
+  width: fit-content;
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  color: #a586ad;
+}
