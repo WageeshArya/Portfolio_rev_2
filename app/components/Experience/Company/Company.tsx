@@ -162,11 +162,11 @@ const Company = ({ item, index }: any) => {
   return (
     <div key={item.company} id={item.company}>
       <div
-        className={`flex w-[60%] mx-auto ${
+        className={`flex sm:flex-col-reverse w-[60%] sm:w-[80%] mx-auto ${
           index % 2 === 0 ? "flex-row-reverse text-right" : "flex-row"
         }`}
       >
-        <div className="p-5 my-[5rem] flex-1">
+        <div className="p-5 my-[5rem] sm:mt-[1rem] flex-1">
           <div className={`text-5xl overflow-y-hidden mb-1`}>
             <div className={`${item.company}-companyName`}>
               {item.companyName}
@@ -195,7 +195,7 @@ const Company = ({ item, index }: any) => {
           </div>
         </div>
         <div
-          className={`p-5 my-[5rem] flex items-center overflow-hidden justify-center ${
+          className={`p-5 my-[5rem] sm:mb-[1rem] flex items-center sm:items-end overflow-hidden justify-center ${
             item.img ? "flex-1" : ""
           }`}
         >
