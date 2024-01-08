@@ -115,9 +115,11 @@ const Skills = (props: Props) => {
     //#f8f8ff
     <section id="SKILLS" className="bg-[#fff] overflow-x-hidden">
       <Title />
-      <div className="p-[5rem]">
+      <div className="p-[5rem] sm:p-[2.5rem]">
         <div className="w-100 pt-[0px]">
-          <div className="font-bold text-8xl pb-[2rem]">FRONT END</div>
+          <div className="font-bold text-8xl sm:text-5xl pb-[2rem]">
+            FRONT END
+          </div>
           <ul>
             <li
               className={`list_item_1 border-0 opacity-0 hover:text-white hover:bg-[#e4aaf4] transition-all duration-300  ${classes.listItem}`}
@@ -225,7 +227,9 @@ const Skills = (props: Props) => {
         </div>
 
         <div>
-          <div className="font-bold text-8xl mt-5 pb-[2rem]">BACK END</div>
+          <div className="font-bold text-8xl sm:text-5xl mt-5 pb-[2rem]">
+            BACK END
+          </div>
           <ul>
             <li
               className={`list_item_7 opacity-0 hover:text-white hover:bg-[#d9dbf8] transition-all duration-300  ${classes.listItem}`}
@@ -299,7 +303,9 @@ const Skills = (props: Props) => {
         </div>
 
         <div>
-          <div className="font-bold text-8xl mt-5 pb-[2rem]">OTHERS</div>
+          <div className="font-bold text-8xl sm:text-5xl mt-5 pb-[2rem]">
+            OTHERS
+          </div>
           <ul>
             <li
               className={`list_item_11 opacity-0 hover:text-white hover:bg-[#bcdcf5] transition-all duration-300  ${classes.listItem}`}
