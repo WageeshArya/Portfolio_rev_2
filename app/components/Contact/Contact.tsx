@@ -165,7 +165,7 @@ const Contact = () => {
             </a>
             <a
               target="_blank"
-              href="/Wageesh_Arya-Resume.pdf"
+              href="https://docs.google.com/document/d/1PmNAh-SwRZ9KTwDl5R-K1aLdr9Hklqxie8L7hR-iVis/edit?usp=sharing"
               className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
             >
               <div className="overflow-hidden">

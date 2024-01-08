@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import classes from "./Nav.module.css";
 import Link from "next/link";
 import gsap from "gsap";
+import Image from "next/image";
 type Props = {};
 
 const Nav = (props: Props) => {
@@ -47,6 +48,21 @@ const Nav = (props: Props) => {
         {
           y: 0,
           opacity: 1,
+          ease: "power4.out",
+        }
+      );
+      gsap.fromTo(
+        ".navIntroText",
+        {
+          y: 40,
+          opacity: 0,
+        },
+        {
+          delay: 0.65,
+          y: 0,
+          duration: 0.5,
+          opacity: 1,
+          ease: "power4.out",
         }
       );
       gsap.fromTo(
@@ -68,6 +84,11 @@ const Nav = (props: Props) => {
         width: "100%",
         delay: 0.35,
       });
+      gsap.to([".navIcon1", ".navIcon2", ".navIcon3"], {
+        opacity: 1,
+        delay: 0.8,
+        ease: "power4.out",
+      });
       extendedNav.style.display = "block";
     } else {
       gsap.to(".divider", {
@@ -85,6 +106,11 @@ const Nav = (props: Props) => {
           opacity: 0,
         }
       );
+      gsap.to([".navIcon1", ".navIcon2", ".navIcon3"], {
+        opacity: 0,
+        duration: 0.15,
+        ease: "power4.out",
+      });
       gsap.to("#extendedNav", {
         height: 0,
         delay: 0.5,
@@ -96,6 +122,19 @@ const Nav = (props: Props) => {
         display: "none",
       });
       gsap.fromTo(
+        ".navIntroText",
+        {
+          y: 0,
+          duration: 0.15,
+          opacity: 1,
+        },
+        {
+          y: 40,
+          opacity: 0,
+          ease: "power4.out",
+        }
+      );
+      gsap.fromTo(
         ".navInnerLogoText, .navInnerLogoContainer",
         {
           delay: 1,
@@ -104,6 +143,7 @@ const Nav = (props: Props) => {
         },
         {
           opacity: 0,
+          ease: "power4.out",
         }
       );
     }
@@ -133,17 +173,25 @@ const Nav = (props: Props) => {
       >
         <div className="h-[6rem] w-full" />
         <div className="flex flex-1 sm:flex-col">
-          <div className="flex-1 flex items-center justify-center">
+          <div className="flex-1 flex flex-col items-center justify-center">
             <div
-              className={`navInnerLogoContainer ${classes.navInnerLogoContainer} h-[4rem] bg-white text-6xl text-[#3b7fff] rounded-md py-10 px-6 flex items-center`}
+              className={`navInnerLogoContainer cursor-pointer ${classes.navInnerLogoContainer} h-[4rem] bg-white text-6xl text-[#3b7fff] rounded-md py-10 px-6 flex items-center`}
+              onClick={() => scrollTo("TOP")}
             >
               <div className={`navInnerLogoText ${classes.navInnerLogoText}`}>
                 W/A
               </div>
             </div>
+            <div className="overflow-hidden py-[1.5rem] text-center w-[80%]">
+              <div className="navIntroText text-[#372f4d]">
+                Thank you for checking out my website! Your visit means a lot.
+                If you&#39;ve got questions, want more info, or just want to
+                chat, feel free to reach out. Cheers!
+              </div>
+            </div>
           </div>
           <div className="flex-1">
-            <ul className="links">
+            <ul className={`links ${isAvailable ? "" : "pointer-events-none"}`}>
               <li
                 className={`contentLink text-5xl mb-6 ${classes.navLink}`}
                 onClick={() => scrollTo("SKILLS")}
@@ -162,16 +210,51 @@ const Nav = (props: Props) => {
               >
                 Contact
               </li>
-              <li className={`contentLink text-5xl mb-6 ${classes.navLink}`}>
-                <a href="/Wageesh_Arya-Resume.pdf" target="_blank">
+              <li
+                className={`contentLink text-5xl mb-6 ${classes.navLink}`}
+                onClick={() => scrollTo("CONTACT")}
+              >
+                <a
+                  href="https://docs.google.com/document/d/1PmNAh-SwRZ9KTwDl5R-K1aLdr9Hklqxie8L7hR-iVis/edit?usp=sharing"
+                  target="_blank"
+                >
                   Resumé
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="flex items-start justify-start h-[4rem]">
+        <div className="flex flex-col items-start justify-start h-[4rem]">
           <div className="divider h-[2px] bg-[#6C6283] w-0" />
+          <div className="flex items-center justify-end h-[3.75rem] w-full">
+            <a className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full">
+              <Image
+                className="navIcon1"
+                src="/buttonIcons/linkedin.svg"
+                width={20}
+                height={20}
+                alt=""
+              />
+            </a>
+            <a className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full">
+              <Image
+                className="navIcon2"
+                src="/buttonIcons/github.svg"
+                width={20}
+                height={20}
+                alt=""
+              />
+            </a>
+            <a className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full">
+              <Image
+                className="navIcon3"
+                src="/buttonIcons/send.svg"
+                width={20}
+                height={20}
+                alt=""
+              />
+            </a>
+          </div>
         </div>
       </div>
       {menu && (

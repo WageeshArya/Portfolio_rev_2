@@ -41,7 +41,7 @@ const Overlay = () => {
 };
 
 export const Main = () => (
-  <div className="h-[100vh] w-[100vw]">
+  <div id="TOP" className="h-[100vh] w-[100vw]">
     <Overlay />
     <Canvas
       shadows
