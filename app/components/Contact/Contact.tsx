@@ -103,7 +103,11 @@ const Contact = () => {
           className={`contactLinksArea flex items-center justify-center w-full h-0 ${classes.linksBackground}`}
         >
           <div className="grid grid-cols-4 gap-2 sm:grid-cols-2">
-            <a className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col ">
+            <a
+              target="_blank"
+              href="mailto:wageesharya114@gmail.com"
+              className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col "
+            >
               <div className="overflow-hidden">
                 <Image
                   className="contactIcon1  sm:h-[25px] sm:w-[25px]"
@@ -119,7 +123,11 @@ const Contact = () => {
                 </div>
               </div>
             </a>
-            <a className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col">
+            <a
+              target="_blank"
+              href="https://github.com/WageeshArya"
+              className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
+            >
               <div className="overflow-hidden">
                 <Image
                   className="contactIcon2  sm:h-[25px] sm:w-[25px]"
@@ -135,7 +143,11 @@ const Contact = () => {
                 </div>
               </div>
             </a>
-            <a className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col">
+            <a
+              target="_blank"
+              href="www.linkedin.com/in/wageesh-arya"
+              className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
+            >
               <div className="overflow-hidden">
                 <Image
                   className="contactIcon3  sm:h-[25px] sm:w-[25px]"
@@ -151,7 +163,11 @@ const Contact = () => {
                 </div>
               </div>
             </a>
-            <a className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col">
+            <a
+              target="_blank"
+              href="/Wageesh_Arya-Resume.pdf"
+              className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
+            >
               <div className="overflow-hidden">
                 <Image
                   className="contactIcon4  sm:h-[25px] sm:w-[25px]"

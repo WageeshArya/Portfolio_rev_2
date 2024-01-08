@@ -163,7 +163,9 @@ const Nav = (props: Props) => {
                 Contact
               </li>
               <li className={`contentLink text-5xl mb-6 ${classes.navLink}`}>
-                Resumé
+                <a href="/Wageesh_Arya-Resume.pdf" target="_blank">
+                  Resumé
+                </a>
               </li>
             </ul>
           </div>
