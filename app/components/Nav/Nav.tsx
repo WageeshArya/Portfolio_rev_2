@@ -8,11 +8,10 @@ type Props = {};
 const Nav = (props: Props) => {
   const [menu, setMenu] = useState(false);
   const [isAvailable, setIsAvailable] = useState(true);
-
   const [scroll, setScroll] = useState("up");
+
   const scrollTo = (id: string) => {
     const section = document.getElementById(id)!;
-    console.log("section:::", section);
     if (section) {
       openClose();
     }
@@ -112,10 +111,10 @@ const Nav = (props: Props) => {
   };
 
   return (
-    <nav>
+    <nav className="overscroll-contain">
       <header
         id="nav"
-        className={`w-[100vw] h-[4rem] flex items-center justify-between px-12 fixed bg-transparent z-50 transition-all duration-300 ease-in-out delay-200 ${
+        className={`overscroll-contain w-[100vw] h-[4rem] flex items-center justify-between px-12 fixed bg-transparent z-50 transition-all duration-300 ease-in-out delay-200 ${
           scroll === "down" ? "-translate-y-full" : ""
         }`}
       >
@@ -130,7 +129,7 @@ const Nav = (props: Props) => {
       </header>
       <div
         id="extendedNav"
-        className={`${classes.navBackground} w-full h-0 text-white fixed top-0 left-0 !z-30 hidden px-10 flex-col`}
+        className={`${classes.navBackground} overscroll-contain w-full h-0 text-white fixed top-0 left-0 !z-30 hidden px-10 flex-col`}
       >
         <div className="h-[6rem] w-full" />
         <div className="flex flex-1 sm:flex-col">
@@ -175,7 +174,7 @@ const Nav = (props: Props) => {
       </div>
       {menu && (
         <div
-          className="h-[50vh] sm:!h-0 w-[100vw] bottom-0 left-0 fixed !z-30"
+          className="h-[50vh] overscroll-contain sm:!h-0 w-[100vw] bottom-0 left-0 fixed !z-30"
           onClick={openClose}
         ></div>
       )}
