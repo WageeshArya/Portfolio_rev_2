@@ -235,7 +235,11 @@ const Nav = (props: Props) => {
         <div className="flex flex-col items-start justify-start h-[4rem]">
           <div className="divider h-[2px] bg-[#6C6283] w-0" />
           <div className="flex items-center justify-end h-[3.75rem] w-full">
-            <a className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full">
+            <a
+              target="_blank"
+              href="www.linkedin.com/in/wageesh-arya"
+              className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full"
+            >
               <Image
                 className="navIcon1"
                 src="/buttonIcons/linkedin.svg"
@@ -244,7 +248,11 @@ const Nav = (props: Props) => {
                 alt=""
               />
             </a>
-            <a className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full">
+            <a
+              target="_blank"
+              href="https://github.com/WageeshArya"
+              className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full"
+            >
               <Image
                 className="navIcon2"
                 src="/buttonIcons/github.svg"
@@ -253,7 +261,11 @@ const Nav = (props: Props) => {
                 alt=""
               />
             </a>
-            <a className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full">
+            <a
+              target="_blank"
+              href="mailto:wageesharya114@gmail.com"
+              className="p-3 mx-1 cursor-pointer transition-all ease-in-out duration-500 hover:bg-[#dfc0f9] rounded-full"
+            >
               <Image
                 className="navIcon3"
                 src="/buttonIcons/send.svg"
