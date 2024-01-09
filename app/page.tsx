@@ -3,19 +3,19 @@ import Nav from "./components/Nav/Nav";
 import { Main } from "./components/Main/Main";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Contact from "./components/Contact/Contact";
 import Loader from "./components/Loader/Loader";
 import gsap from "gsap";
 export default function Home() {
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       const locomotiveScroll = new LocomotiveScroll();
     };
+    document.body.style.overflowY = "hidden";
     setTimeout(() => {
-      setLoading(false);
+      document.body.style.overflowY = "auto";
     }, 3000);
     gsap.fromTo(
       "#main",
@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main>
       <Loader />
-      <div id="main" className={`${loading ? "!overflow-y-hidden" : ""}`}>
+      <div id="main">
         <Nav />
         <Main />
         <Skills />
