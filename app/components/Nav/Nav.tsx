@@ -158,7 +158,15 @@ const Nav = (props: Props) => {
           scroll === "down" ? "-translate-y-full" : ""
         }`}
       >
-        <div className="flex-2 text-xl">W/A</div>
+        <div
+          className="flex-2 text-xl cursor-pointer"
+          onClick={() => {
+            const section = document.getElementById("TOP")!;
+            section?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+        >
+          W/A
+        </div>
 
         <div
           className="flex-2 flex justify-end cursor-pointer"
