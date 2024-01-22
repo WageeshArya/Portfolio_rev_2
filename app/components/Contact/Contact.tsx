@@ -18,7 +18,7 @@ const Contact = () => {
       {
         y: 0,
         opacity: 1,
-        delay: 1.25,
+        delay: 0.25,
         scrollTrigger: {
           trigger: "#CONTACT",
           start: "top 20%",
@@ -36,8 +36,8 @@ const Contact = () => {
       {
         y: 0,
         opacity: 1,
-        stagger: 0.25,
-        delay: 0.75,
+        stagger: 0.1,
+        delay: 0.25,
         scrollTrigger: {
           trigger: "#CONTACT",
           start: "top 20%",
@@ -55,8 +55,8 @@ const Contact = () => {
       {
         y: 0,
         opacity: 1,
-        stagger: 0.25,
-        delay: 0.75,
+        stagger: 0.1,
+        delay: 0.25,
         scrollTrigger: {
           trigger: "#CONTACT",
           start: "top 20%",
@@ -73,7 +73,7 @@ const Contact = () => {
       {
         height: "50vh",
         opacity: 1,
-        stagger: 0.25,
+        stagger: 0.1,
         scrollTrigger: {
           trigger: "#CONTACT",
           start: "top 20%",
@@ -99,90 +99,92 @@ const Contact = () => {
             digital projects. Looking forward to hearing from you!
           </div> */}
         </div>
-        <div
-          className={`contactLinksArea flex items-center justify-center w-full h-0 ${classes.linksBackground}`}
-        >
-          <div className="grid grid-cols-4 gap-2 sm:grid-cols-2">
-            <a
-              target="_blank"
-              href="mailto:wageesharya114@gmail.com"
-              className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col "
-            >
-              <div className="overflow-hidden">
-                <Image
-                  className="contactIcon1  sm:h-[25px] sm:w-[25px]"
-                  src="/buttonIcons/send.svg"
-                  width={40}
-                  height={40}
-                  alt=""
-                />
-              </div>
-              <div className="overflow-hidden">
-                <div className="contactLink1 text-xl sm:text-[1rem] mt-4">
-                  Email
+        <div className="overflow-hidden flex items-end justify-center">
+          <div
+            className={`contactLinksArea flex items-center justify-center w-full h-0 ${classes.linksBackground}`}
+          >
+            <div className="grid grid-cols-4 gap-2 sm:grid-cols-2">
+              <a
+                target="_blank"
+                href="mailto:wageesharya114@gmail.com"
+                className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col "
+              >
+                <div className="overflow-hidden">
+                  <Image
+                    className="contactIcon1  sm:h-[25px] sm:w-[25px]"
+                    src="/buttonIcons/send.svg"
+                    width={40}
+                    height={40}
+                    alt=""
+                  />
                 </div>
-              </div>
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/WageeshArya"
-              className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
-            >
-              <div className="overflow-hidden">
-                <Image
-                  className="contactIcon2  sm:h-[25px] sm:w-[25px]"
-                  src="/buttonIcons/github.svg"
-                  width={40}
-                  height={40}
-                  alt=""
-                />
-              </div>
-              <div className="overflow-hidden">
-                <div className="contactLink2 text-xl sm:text-[1rem] mt-4">
-                  GitHub
+                <div className="overflow-hidden">
+                  <div className="contactLink1 text-xl sm:text-[1rem] mt-4">
+                    Email
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a
-              target="_blank"
-              href="www.linkedin.com/in/wageesh-arya"
-              className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
-            >
-              <div className="overflow-hidden">
-                <Image
-                  className="contactIcon3  sm:h-[25px] sm:w-[25px]"
-                  src="/buttonIcons/linkedin.svg"
-                  width={40}
-                  height={40}
-                  alt=""
-                />
-              </div>
-              <div className="overflow-hidden">
-                <div className="contactLink3 text-xl sm:text-[1rem] mt-4">
-                  LinkedIn
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/WageeshArya"
+                className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
+              >
+                <div className="overflow-hidden">
+                  <Image
+                    className="contactIcon2  sm:h-[25px] sm:w-[25px]"
+                    src="/buttonIcons/github.svg"
+                    width={40}
+                    height={40}
+                    alt=""
+                  />
                 </div>
-              </div>
-            </a>
-            <a
-              target="_blank"
-              href="https://docs.google.com/document/d/1PmNAh-SwRZ9KTwDl5R-K1aLdr9Hklqxie8L7hR-iVis/edit?usp=sharing"
-              className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
-            >
-              <div className="overflow-hidden">
-                <Image
-                  className="contactIcon4  sm:h-[25px] sm:w-[25px]"
-                  src="/buttonIcons/paperclip.svg"
-                  width={40}
-                  height={40}
-                  alt=""
-                />
-              </div>
-              <div className="overflow-hidden">
-                <div className="contactLink3 text-xl sm:text-[1rem] mt-4">
-                  Resumé
+                <div className="overflow-hidden">
+                  <div className="contactLink2 text-xl sm:text-[1rem] mt-4">
+                    GitHub
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+              <a
+                target="_blank"
+                href="www.linkedin.com/in/wageesh-arya"
+                className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
+              >
+                <div className="overflow-hidden">
+                  <Image
+                    className="contactIcon3  sm:h-[25px] sm:w-[25px]"
+                    src="/buttonIcons/linkedin.svg"
+                    width={40}
+                    height={40}
+                    alt=""
+                  />
+                </div>
+                <div className="overflow-hidden">
+                  <div className="contactLink3 text-xl sm:text-[1rem] mt-4">
+                    LinkedIn
+                  </div>
+                </div>
+              </a>
+              <a
+                target="_blank"
+                href="https://docs.google.com/document/d/1PmNAh-SwRZ9KTwDl5R-K1aLdr9Hklqxie8L7hR-iVis/edit?usp=sharing"
+                className="cursor-pointer transition-all duration-200 ease-in-out hover:bg-white hover:rounded-lg flex-1 p-10 flex items-center justify-between flex-col"
+              >
+                <div className="overflow-hidden">
+                  <Image
+                    className="contactIcon4  sm:h-[25px] sm:w-[25px]"
+                    src="/buttonIcons/paperclip.svg"
+                    width={40}
+                    height={40}
+                    alt=""
+                  />
+                </div>
+                <div className="overflow-hidden">
+                  <div className="contactLink3 text-xl sm:text-[1rem] mt-4">
+                    Resumé
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
