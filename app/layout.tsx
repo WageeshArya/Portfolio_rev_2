@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Space_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const space_mono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Wageesh Arya | アリャーワギーシ",
@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/favicon.png" />
       </head>
-      <body className={space_mono.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
