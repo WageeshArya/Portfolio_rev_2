@@ -14,7 +14,7 @@ export const Skills = () => {
       stagger: 0.25,
       scrollTrigger: {
         trigger: ".skillsSection",
-        start: "start center",
+        start: "start bottom-=15%",
         scrub: false,
         toggleActions: "play none none reverse",
       },
@@ -24,13 +24,12 @@ export const Skills = () => {
   return (
     <div className="skillsSection w-svw relative my-8">
       <div id="skills" className="mx-10 py-4">
-        <h1 className="font-normal bg-black py-8 rounded-2xl text-6xl text-white relative min-h-[100vh]">
-          {/* <div className="h-full w-full overflow-hidden relative"> */}
-          <div className="skillsTitle hidden opacity-0 sticky ml-8 top-1/2 left-20">
+        <div className="font-normal bg-black py-8 rounded-2xl text-6xl text-white relative min-h-[100vh]">
+          <div className="skillsTitle hidden opacity-0 sticky ml-8 top-1/2 left-20 text-8xl">
             SKILLS
           </div>
           <div className="skillsList hidden opacity-0 w-1/2 h-full ml-[50%]">
-            <ul className="relative">
+            <ul className="relative pb-10">
               <ul>
                 <h3 className="my-4 text-5xl">Front End</h3>
                 <li className="text-sm leading-[2rem] ml-4">HTML</li>
@@ -77,9 +76,7 @@ export const Skills = () => {
               </ul>
             </ul>
           </div>
-          {/* </div> */}
-        </h1>
-        {/* </div> */}
+        </div>
       </div>
     </div>
   );
