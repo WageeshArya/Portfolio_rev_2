@@ -1,26 +1,30 @@
-"use client";
+import { language } from "@/app/utils/constants";
+import { useLocalStorage } from "usehooks-ts";
 
-import { language } from "../../utils/constants";
-export const LanguageSelector = () => {
+const LanguageSelector = () => {
+  const [value, setValue] = useLocalStorage("page-language", language.en);
+
+  const setLanguage = (language: string) => {
+    setValue(language);
+  };
+
   return (
     <div className="flex items-center justify-center">
       <button
-      // className={`${
-      //   store?.language === language.jp ? "border-b-[1px] border-black" : ""
-      // }`}
-      // onClick={() => store?.setLanguage(language.jp)}
+        className={value === language.jp ? "underline underline-offset-8" : ""}
+        onClick={() => setLanguage(language.jp)}
       >
         ＪＰ
       </button>
       <p>／</p>
       <button
-      // className={`${
-      //   store?.language === language.en ? "border-b-[1px] border-black" : ""
-      // }`}
-      // onClick={() => store?.setLanguage(language.en)}
+        className={value !== language.jp ? "underline underline-offset-8" : ""}
+        onClick={() => setLanguage(language.en)}
       >
         ＥＮ
       </button>
     </div>
   );
 };
+
+export default LanguageSelector;
