@@ -10,9 +10,15 @@ export default function Home() {
   useEffect(() => {
     window.history.scrollRestoration = "manual";
     document.body.style.overflow = "hidden";
+
     setTimeout(() => {
       document.body.style.overflow = "auto";
     }, 4000);
+
+    if (window.location.hash) {
+      // Redirect to the URL without the fragment
+      window.location.replace(window.location.href.split("#")[0]);
+    }
   }, []);
 
   return (
