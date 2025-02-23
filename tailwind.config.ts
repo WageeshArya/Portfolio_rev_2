@@ -8,13 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        subText: "#A4A4A4",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        sm: { min: "100px", max: "767px" },
+        xs: { min: "100px", max: "449px" },
+        sm: { min: "450px", max: "767px" },
         // => @media (min-width: 640px and max-width: 767px) { ... }
 
         lg: { min: "768px", max: "1279px" },
