@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["200", "400", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Wageesh Arya | アリャーワギーシ",
