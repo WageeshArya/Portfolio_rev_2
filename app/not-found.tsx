@@ -6,12 +6,7 @@ type Props = {};
 const NotFound = (props: Props) => {
   return (
     <div className="w-[100vw] h-[100vh] flex items-center justify-center flex-col">
-      <Image
-        src="/404.svg"
-        width={750}
-        height={750}
-        alt="404 error: page not found"
-      />
+      <h1 className="text-[10rem] font-bold">404!</h1>
       <div>Apologies, I only have one page on this portfolio website.</div>
       <div>
         Would you like to{" "}
