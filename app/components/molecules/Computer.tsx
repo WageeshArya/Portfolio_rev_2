@@ -155,7 +155,7 @@ const MacbookModel = () => {
                   </div>
                   <div class="socialContainer">
                     <button>
-                      <a target="_blank" href="#" class="socialLinkButton bgExtendLeft">
+                      <a target="_blank" href="https://docs.google.com/document/d/1qW57vC58ldUzFJbnVd60a92-5_6pQ_OO/edit?usp=sharing&ouid=111401031344501388242&rtpof=true&sd=true" class="socialLinkButton bgExtendLeft">
                         <span class="linkText">${textLanguage.contact.resume}</span>
                       </a>
                     </button>

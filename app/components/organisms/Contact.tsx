@@ -48,20 +48,31 @@ export const Contact = () => {
             <h1 className="font-bold mb-6">{textLanguage.contact.links}</h1>
             <Link
               target="_blank"
-              className="block"
+              className="block w-fit hover:underline underline-offset-4"
               href="https://www.linkedin.com/in/wageesh-arya"
             >
               {textLanguage.contact.linkedIn}
             </Link>
             <Link
               target="_blank"
-              className="block"
+              className="block w-fit hover:underline underline-offset-4"
               href="https://github.com/WageeshArya"
             >
               {textLanguage.contact.github}
             </Link>
-            <Link target="_blank" className="block" href="">
+            <Link
+              target="_blank"
+              className="block w-fit hover:underline underline-offset-4"
+              href="https://docs.google.com/document/d/1qW57vC58ldUzFJbnVd60a92-5_6pQ_OO/edit?usp=sharing&ouid=111401031344501388242&rtpof=true&sd=true"
+            >
               {textLanguage.contact.resume}
+            </Link>
+            <Link
+              target="_blank"
+              className="block w-fit hover:underline underline-offset-4"
+              href="https://docs.google.com/document/d/1tgxTvkjug-FwyhVJBFjrE_rms-enSPCF6scH9lpuYCE/edit?usp=sharing"
+            >
+              {textLanguage.contact.cv}
             </Link>
           </div>
           <div className="mt-4 font-bold whitespace-pre-line">
