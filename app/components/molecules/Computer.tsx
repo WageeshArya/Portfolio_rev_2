@@ -11,6 +11,7 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
+import { div } from "three/examples/jsm/nodes/Nodes.js";
 import { useLocalStorage } from "usehooks-ts";
 
 const MacbookModel = () => {
@@ -29,25 +30,26 @@ const MacbookModel = () => {
   );
 
   return (
-    <Float rotationIntensity={0.6}>
-      <rectAreaLight
-        width={2.5}
-        height={1.65}
-        intensity={65}
-        color={"#ffffff"}
-        rotation={[-0.1, Math.PI, 0]}
-        position={[0, 0.55, -1.15]}
-      />
-      <primitive object={macbook.scene} position-y={-1.2} position-x={0.5}>
-        <Html
-          transform
-          distanceFactor={1.17}
-          position={[0, 1.56, -1.4]}
-          rotation-x={-0.256}
-        >
-          <iframe
-            className="w-[1024px] h-[670px] border-none rounded-lg bg-black"
-            srcDoc={`
+    <Suspense fallback={<Loader />}>
+      <Float rotationIntensity={0.6}>
+        <rectAreaLight
+          width={2.5}
+          height={1.65}
+          intensity={65}
+          color={"#ffffff"}
+          rotation={[-0.1, Math.PI, 0]}
+          position={[0, 0.55, -1.15]}
+        />
+        <primitive object={macbook.scene} position-y={-1.2} position-x={0.5}>
+          <Html
+            transform
+            distanceFactor={1.17}
+            position={[0, 1.56, -1.4]}
+            rotation-x={-0.256}
+          >
+            <iframe
+              className="w-[1024px] h-[670px] border-none rounded-lg bg-black"
+              srcDoc={`
               <html lang="en">
               <head>
                 <style>
@@ -147,28 +149,28 @@ const MacbookModel = () => {
                 >
                   <div class="socialContainer">
                     <button>
-                      <a href="www.linkedin.com/in/wageesh-arya" class="socialLinkButton bgExtendLeft">
+                      <a target="_blank" href="https://www.linkedin.com/in/wageesh-arya" class="socialLinkButton bgExtendLeft">
                         <span class="linkText">${textLanguage.contact.linkedIn}</span>
                       </a>
                     </button>
                   </div>
                   <div class="socialContainer">
                     <button>
-                      <a href="#" class="socialLinkButton bgExtendLeft">
+                      <a target="_blank" href="#" class="socialLinkButton bgExtendLeft">
                         <span class="linkText">${textLanguage.contact.resume}</span>
                       </a>
                     </button>
                   </div>
                   <div class="socialContainer">
                     <button>
-                      <a href="#" class="socialLinkButton bgExtendLeft">
+                      <a target="_blank" href="mailto:wageesharya114@gmail.com" class="socialLinkButton bgExtendLeft">
                         <span class="linkText">Email</span>
                       </a>
                     </button>
                   </div>
                   <div class="socialContainer">
                     <button>
-                      <a href="https://github.com/WageeshArya" class="socialLinkButton bgExtendLeft">
+                      <a target="_blank" href="https://github.com/WageeshArya" class="socialLinkButton bgExtendLeft">
                         <span class="linkText">${textLanguage.contact.github}</span>
                       </a>
                     </button>
@@ -179,11 +181,16 @@ const MacbookModel = () => {
             </html>
 
               `}
-          />
-        </Html>
-      </primitive>
-    </Float>
+            />
+          </Html>
+        </primitive>
+      </Float>
+    </Suspense>
   );
+};
+
+const Loader = () => {
+  return <div>Loading!</div>;
 };
 
 const Computer = () => {

@@ -46,13 +46,21 @@ export const Contact = () => {
         <div className="mx-auto w-[80%]">
           <div>
             <h1 className="font-bold mb-6">{textLanguage.contact.links}</h1>
-            <Link className="block" href="www.linkedin.com/in/wageesh-arya">
+            <Link
+              target="_blank"
+              className="block"
+              href="https://www.linkedin.com/in/wageesh-arya"
+            >
               {textLanguage.contact.linkedIn}
             </Link>
-            <Link className="block" href="https://github.com/WageeshArya">
+            <Link
+              target="_blank"
+              className="block"
+              href="https://github.com/WageeshArya"
+            >
               {textLanguage.contact.github}
             </Link>
-            <Link className="block" href="">
+            <Link target="_blank" className="block" href="">
               {textLanguage.contact.resume}
             </Link>
           </div>
