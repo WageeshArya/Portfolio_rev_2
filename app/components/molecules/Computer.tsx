@@ -1,4 +1,6 @@
 "use client";
+import { language } from "@/app/utils/constants";
+import { textsEn, textsJp } from "@/app/utils/language";
 import {
   Environment,
   useGLTF,
@@ -8,9 +10,20 @@ import {
   Html,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
+import { useLocalStorage } from "usehooks-ts";
 
 const MacbookModel = () => {
+  const [textLanguage, setTextLanguage] = useState(textsEn);
+  const [value] = useLocalStorage("page-language", language.en);
+
+  useEffect(() => {
+    if (value === language.jp) {
+      setTextLanguage(textsJp);
+    } else {
+      setTextLanguage(textsEn);
+    }
+  }, [value]);
   const macbook = useGLTF(
     "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
   );
@@ -126,12 +139,26 @@ const MacbookModel = () => {
                 </style>
               </head>
               <body>
-                <h1 class="title">Thank you for checking out my portfolio!\n</h1>
-                <h2 class="subTitle">You can find me on</h2>
+                <h1 class="title">${textLanguage.html.thanks}\n</h1>
+                <h2 class="subTitle">${textLanguage.html.intro}</h2>
                 <p class="arrow">↓</p>
                 <div
                   class="socials"
                 >
+                  <div class="socialContainer">
+                    <button>
+                      <a href="www.linkedin.com/in/wageesh-arya" class="socialLinkButton bgExtendLeft">
+                        <span class="linkText">${textLanguage.contact.linkedIn}</span>
+                      </a>
+                    </button>
+                  </div>
+                  <div class="socialContainer">
+                    <button>
+                      <a href="#" class="socialLinkButton bgExtendLeft">
+                        <span class="linkText">${textLanguage.contact.resume}</span>
+                      </a>
+                    </button>
+                  </div>
                   <div class="socialContainer">
                     <button>
                       <a href="#" class="socialLinkButton bgExtendLeft">
@@ -141,25 +168,12 @@ const MacbookModel = () => {
                   </div>
                   <div class="socialContainer">
                     <button>
-                      <a href="#" class="socialLinkButton bgExtendLeft">
-                        <span class="linkText">GitHub</span>
+                      <a href="https://github.com/WageeshArya" class="socialLinkButton bgExtendLeft">
+                        <span class="linkText">${textLanguage.contact.github}</span>
                       </a>
                     </button>
                   </div>
-                  <div class="socialContainer">
-                    <button>
-                      <a href="#" class="socialLinkButton bgExtendLeft">
-                        <span class="linkText">LinkedIn</span>
-                      </a>
-                    </button>
-                  </div>
-                  <div class="socialContainer">
-                    <button>
-                      <a href="#" class="socialLinkButton bgExtendLeft">
-                        <span class="linkText">Resume</span>
-                      </a>
-                    </button>
-                  </div>
+                  
                 </div>
               </body>
             </html>
@@ -176,7 +190,7 @@ const Computer = () => {
   return (
     <Suspense>
       <Canvas
-        className="r3f relative mx-auto xl:!w-[800px] xl:!h-[800px] lg:!w-[500px] lg:!h-[500px] sm:!w-[480px] sm:!h-[480px] touch-none !z-100"
+        className="r3f relative mx-auto xl:!w-[800px] xl:!h-[800px] lg:!w-[500px] lg:!h-[500px] sm:!w-[480px] xs:sm:!h-[480px] xs:!h-[360px] touch-none !z-100"
         camera={{
           fov: 45,
           near: 0.1,
