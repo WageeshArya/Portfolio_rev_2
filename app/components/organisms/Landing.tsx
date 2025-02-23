@@ -109,7 +109,7 @@ export const Landing = () => {
         ref={completed}
         className={`relative ${isAnimationComplete ? "block" : "hidden"}`}
       >
-        <div className="computerCanvas opacity-0 absolute top-0 right-0 lg:top-20 sm:!w-[100svw] sm:mx-auto sm:!h-[480px] xs:!h-[480px] xs:top-10 xs:!w-[100svw] overflow-hidden">
+        <div className="computerCanvas opacity-0 absolute top-0 right-0 lg:top-20 sm:!w-[100svw] sm:mx-auto sm:!h-[525px] xs:!h-[540px] xs:top-10 xs:!w-[100svw] overflow-hidden">
           <Computer />
         </div>
         <div className="w-svw h-svh">

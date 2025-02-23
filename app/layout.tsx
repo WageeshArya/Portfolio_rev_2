@@ -8,11 +8,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Wageesh Arya | アリャーワギーシ",
+  title: "Wageesh Arya | アリャー ワギーシ",
   description:
-    "I'm a full stack developer specializing in front end development! Check out my personal portfolio at https://www.wageesharya.com!",
+    "Hello! I'm a full stack web developer. Check out my personal portfolio at https://www.wageesharya.com!",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
 };
 

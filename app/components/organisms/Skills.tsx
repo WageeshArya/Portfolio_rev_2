@@ -50,28 +50,28 @@ export const Skills = () => {
                 <h3 className="my-4 text-5xl lg:text-3xl sm:text-xl xs:text-xl">
                   {textLanguage.skills.FE}
                 </h3>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   HTML
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   CSS/SCSS
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   TypeScript
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   JavaScript
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Next.js/React/Redux
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Vue.js
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   GSAP Animations
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Three.js/React Three Fiber
                 </li>
               </ul>
@@ -80,25 +80,25 @@ export const Skills = () => {
                 <h3 className="my-4 text-5xl lg:text-3xl sm:text-xl xs:text-xl">
                   {textLanguage.skills.BE}
                 </h3>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Node.js
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Express
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   LangChain/LangSmith
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   PostgreSQL
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   SQL
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   MongoDB/Mongoose
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Prisma ORM
                 </li>
               </ul>
@@ -107,16 +107,16 @@ export const Skills = () => {
                 <h3 className="my-4 text-5xl lg:text-3xl sm:text-xl xs:text-xl">
                   {textLanguage.skills.others}
                 </h3>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Amazon Web Services (AWS)
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Git/GitHub Actions
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   k6 Stress Testing
                 </li>
-                <li className="text-sm sm:text-[0.75rem] xs:text-[0.5rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
+                <li className="text-sm sm:text-[0.75rem] xs:text-[0.65rem] leading-[2rem] sm:leading-[1.5rem] xs:leading-[1.25rem] ml-4">
                   Fastlane
                 </li>
               </ul>

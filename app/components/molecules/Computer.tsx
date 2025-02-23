@@ -11,7 +11,6 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
 import { useLocalStorage } from "usehooks-ts";
 
 const MacbookModel = () => {
@@ -54,7 +53,11 @@ const MacbookModel = () => {
               <head>
                 <style>
                   @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+                  html {
+                    overflow: hidden;
+                  }
                   body {
+                    overflow: auto;
                     font-family: "Inter", serif;
                     font-optical-sizing: auto;
                     font-style: normal;
