@@ -85,7 +85,7 @@ export const Landing = () => {
         <div className="w-svw h-svh !z-50 bg-black" ref={background}>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <h1
-              className="font-bold text-8xl lg:text-6xl sm:text-4xl xs:text-2xl text-center text-white"
+              className="font-bold w-svw text-8xl lg:text-6xl sm:text-6xl xs:text-4xl text-center text-white"
               ref={primaryText}
             >
               こんにちは！

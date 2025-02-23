@@ -53,11 +53,7 @@ const MacbookModel = () => {
               <head>
                 <style>
                   @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
-                  html {
-                    overflow: hidden;
-                  }
                   body {
-                    overflow: auto;
                     font-family: "Inter", serif;
                     font-optical-sizing: auto;
                     font-style: normal;
@@ -200,7 +196,7 @@ const Computer = () => {
   return (
     <Suspense>
       <Canvas
-        className="r3f relative mx-auto xl:!w-[800px] xl:!h-[800px] lg:!w-[500px] lg:!h-[500px] sm:!w-[480px] xs:sm:!h-[480px] xs:!h-[360px] touch-none !z-100"
+        className="r3f relative mx-auto xl:!w-[800px] xl:!h-[800px] lg:!w-[500px] lg:!h-[500px] sm:!w-[480px] sm:!h-[525px] xs:!h-[500px] touch-none !z-100"
         camera={{
           fov: 45,
           near: 0.1,
